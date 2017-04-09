@@ -1,0 +1,13 @@
+<scroll-view scroll-y="true" style="height: 100%;">
+    <view wx:for="{{rankList}}" wx:for-item="item" wx:for-index="index" wx:key="{{index}}">
+        <view class="billItem">
+            <view class="billItemRight">
+                <view class="billItemRightContainer">
+                    <view class="billItemDesTitle fl">{{index}}</view>
+                    <view class="billItemDesTitle fl">{{item.name}}</view>
+                    <view class="billItemDesReduce fl">{{item.vote_num}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</scroll-view>

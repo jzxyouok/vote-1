@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Created by PhpStorm.
  * User: ZhangHao
@@ -7,6 +6,7 @@
  * Time: 19:10
  */
 include_once "../common/appConfig.php";
+include_once "../common/curl.lib.php";
 
 class wechatLogin{
     public static function getSessionKey($jsCode){

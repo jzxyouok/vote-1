@@ -1,0 +1,40 @@
+{
+  "pages":[
+    "pages/paperList/paperList",
+    "pages/paperDetail/paperDetail",
+    "pages/vote/vote",
+    "pages/rankList/rankList"
+  ],
+  "window":{
+    "navigationBarBackgroundColor": "#313131",
+    "navigationBarTitleText": "读后感投票",
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh":"true"
+  },
+  "tabBar": {
+    "color":"#ffffff",
+    "selectedColor": "#e8ae26",
+    "backgroundColor": "#313131",
+    "borderStyle": "black",
+    "list": [
+    {
+      "pagePath": "pages/paperList/paperList",
+      "iconPath": "images/tabs/list.png",
+      "selectedIconPath": "images/tabs/list_focus.png",
+      "text": "文章列表"
+    },
+    {
+      "pagePath": "pages/vote/vote",
+      "iconPath": "images/tabs/vote.png",
+      "selectedIconPath": "images/tabs/vote_focus.png",
+      "text": "去投票"
+    },
+    {
+      "pagePath": "pages/rankList/rankList",
+      "iconPath": "images/tabs/rank.png",
+      "selectedIconPath": "images/tabs/rank_focus.png",
+      "text": "当前排名"
+    }]
+  },
+  "debug": true
+}

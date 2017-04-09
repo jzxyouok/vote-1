@@ -1,0 +1,17 @@
+<view class="container">
+    <view class="item">
+        <view class="itemLeft fl">
+            <image src="{{wechatUserInfo.avatarUrl}}" class="personImg fl"></image>
+            <text class="fl personName">{{wechatUserInfo.nickName}}</text>
+        </view>
+    </view>
+
+    <checkbox-group bindchange="checkboxChange">
+      <label class="checkbox" wx:for="{{listData}}" wx:for-item="item">
+        <checkbox value="{{item.index}}"/>{{item.author}}：{{item.title}}
+      </label>
+    </checkbox-group>
+    <button type="primary" bindtap="vote"> 确认投票 </button>
+
+</view>
+

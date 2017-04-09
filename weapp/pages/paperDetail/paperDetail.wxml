@@ -1,0 +1,10 @@
+<view class="container">
+    <view>
+        <view class="detailTitle">{{title}}</view>
+        <view class="detailTitle">{{subTitle}}</view>
+        <view class="detailTitle">作者：{{author}}</view>
+        <view class="textAreaBox" wx:for="{{content}}" wx:for-item="item" wx:for-index="index" wx:key="{{index}}">
+            <view>{{item}}</view>
+        </view>
+    </view>
+</view>
