@@ -5,6 +5,10 @@ Page({
         listData:[]
     },
 
+    onPullDownRefresh: function(){
+        wx.stopPullDownRefresh()
+    },
+
     onLoad: function() {
         this.setData({
             listData:app.globalData.listData

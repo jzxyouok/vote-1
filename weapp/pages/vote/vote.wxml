@@ -5,10 +5,14 @@
 
     <checkbox-group bindchange="checkboxChange">
       <label class="checkbox" wx:for="{{listData}}" wx:for-item="item">
-        <checkbox value="{{item.index}}"/>{{item.author}}：{{item.title}}
+        <view class="listItem">
+           <checkbox value="{{item.index}}"/>{{item.author}}：{{item.title}}
+        </view>
       </label>
     </checkbox-group>
-    <button type="primary" bindtap="vote"> 确认投票 </button>
+    <view class="voteArea">
+        <button type="primary" bindtap="vote">确认投票</button>
+    </view>
 
 </view>
 

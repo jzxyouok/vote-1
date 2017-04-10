@@ -9,6 +9,7 @@ Page({
         choices:"",
         choicesArr:[]
     },
+    
     onPullDownRefresh: function(){
         wx.stopPullDownRefresh()
     },

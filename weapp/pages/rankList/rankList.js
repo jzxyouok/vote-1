@@ -8,6 +8,10 @@ Page({
         this.fetchList();
 
     },
+    
+    onPullDownRefresh: function(){
+        wx.stopPullDownRefresh()
+    },
 
 
     fetchList:function(){
