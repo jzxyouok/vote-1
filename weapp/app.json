@@ -7,7 +7,7 @@
   ],
   "window":{
     "navigationBarBackgroundColor": "#313131",
-    "navigationBarTitleText": "读后感投票",
+    "navigationBarTitleText": "征文投票",
     "navigationBarTextStyle":"white",
     "enablePullDownRefresh":"true"
   },
@@ -21,7 +21,7 @@
       "pagePath": "pages/paperList/paperList",
       "iconPath": "images/tabs/list.png",
       "selectedIconPath": "images/tabs/list_focus.png",
-      "text": "文章列表"
+      "text": "征文列表"
     },
     {
       "pagePath": "pages/vote/vote",

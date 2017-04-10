@@ -1,0 +1,9 @@
+.hint{
+    width:92%;
+
+    background-color:#AAAAFF;
+    color:#ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    padding:10px 4% 10px;
+}

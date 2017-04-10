@@ -1,12 +1,13 @@
 <scroll-view scroll-y="true" style="height: 100%;">
     <view wx:for="{{listData}}" wx:for-item="item" wx:for-index="index" wx:key="{{index}}">
-        <view class="billItem" bindtap="goDetail" data-paperid="{{item.index}}">
-            <view class="billItemRight">
-                <view class="billItemRightContainer">
-                    <view class="billItemDesTitle fl">{{item.author}}</view>
-                    <view class="billItemDesTitle fl">{{item.title}}</view>
-                    <view class="billItemDesReduce fl">{{item.subTitle}}</view>
-                </view>
+        <view class="paperItem" bindtap="goDetail" data-paperid="{{item.index}}">
+            <view class="titleItem">
+                {{item.title}}
+                <image class="titleArrow fr" src="../../images/icons/arrow.png"></image>
+            </view>
+            <view class="itemDetail">
+                <view class="subTitle">{{item.subTitle}}</view>
+                <view class="author">作者：{{item.author}}</view>
             </view>
         </view>
     </view>
