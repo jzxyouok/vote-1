@@ -32,7 +32,7 @@ Page({
         var that = this;
         if(that.checkNum(that.data.choicesArr)){
             wx.request({
-                url: config.develop + "interface/vote.php?choices=" + that.data.choices +"&voter=" + that.data.openId,
+                url: config.produce + "interface/vote.php?choices=" + that.data.choices +"&voter=" + that.data.openId,
                 method:"GET",
                 header: {
                     'content-type': 'application/json',

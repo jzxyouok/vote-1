@@ -1,4 +1,5 @@
 var config = require("./util/config.js");
+var listData = require("./util/paper.js");
 
 App({
     onLaunch: function () {
@@ -16,12 +17,12 @@ App({
                 success: function (resp) {
                     //根据code获取openId
                     wx.request({
-                        url: config.develop + 'interface/userInfo.php?code=' + resp.code,
+                        url: config.produce + 'interface/userInfo.php?code=' + resp.code,
                         method:"GET",
                         header: {
-                            'content-type': 'application/json',
-                            "dataType":"json"
+                            'content-type': 'application/json;charset=utf-8'
                         },
+                        dataType:"json",
                         success: function(resp) {
                             //记录openId
                             that.globalData.openId = resp.data.data.openId;
@@ -48,8 +49,9 @@ App({
     //获取文章数据
     fetchList:function(){
         var that = this;
-        wx.request({
-            url: config.develop + 'data/paper.json',
+        that.globalData.listData = listData;
+        /*wx.request({
+            url: config.produce + 'data/paper.json',
             method:"GET",
             header: {
                 'content-type': 'application/json',
@@ -63,7 +65,7 @@ App({
                     title:"获取列表失败"
                 })
             }
-        });
+        });*/
     },
 
     //全局数据

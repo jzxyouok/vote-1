@@ -13,7 +13,7 @@ Page({
     fetchList:function(){
         var that = this;
         wx.request({
-            url: config.develop + "interface/rank.php",
+            url: config.produce + "interface/rank.php",
             method:"GET",
             header: {
                 'content-type': 'application/json',
