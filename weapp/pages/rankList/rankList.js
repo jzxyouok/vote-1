@@ -6,13 +6,15 @@ Page({
 
     onLoad: function () {
         this.fetchList();
-
     },
     
     onPullDownRefresh: function(){
         wx.stopPullDownRefresh()
     },
 
+    onShow:function () {
+        this.fetchList();
+    },
 
     fetchList:function(){
         var that = this;

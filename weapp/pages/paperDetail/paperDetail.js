@@ -20,7 +20,10 @@ Page({
                 that.fetchDetail();
             }
         });
+    },
 
+    onShow:function () {
+        this.fetchDetail();
     },
 
     fetchDetail:function () {
