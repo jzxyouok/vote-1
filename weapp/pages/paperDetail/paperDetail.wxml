@@ -14,4 +14,8 @@
             <view class="paragraph">{{"  "+ item}}</view>
         </view>
     </view>
+
+    <view class="voteArea">
+        <button type="primary" bindtap="goVote">去点赞</button>
+    </view>
 </view>

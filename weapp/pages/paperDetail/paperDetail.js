@@ -34,5 +34,11 @@ Page({
             subTitle:detail.subTitle,
             content:detail.content
         });
+    },
+
+    goVote:function () {
+        wx.navigateTo({
+            url: '../vote/vote'
+        });
     }
 });

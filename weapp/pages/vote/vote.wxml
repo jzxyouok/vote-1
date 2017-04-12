@@ -11,7 +11,7 @@
       </label>
     </checkbox-group>
     <view class="voteArea">
-        <button type="primary" bindtap="vote">确认投票</button>
+        <button type="primary" bindtap="vote">确认点赞</button>
     </view>
 
 </view>

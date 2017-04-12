@@ -7,7 +7,7 @@
   ],
   "window":{
     "navigationBarBackgroundColor": "#313131",
-    "navigationBarTitleText": "征文投票",
+    "navigationBarTitleText": "团队征文",
     "navigationBarTextStyle":"white",
     "enablePullDownRefresh":"true"
   },
@@ -24,16 +24,10 @@
       "text": "征文列表"
     },
     {
-      "pagePath": "pages/vote/vote",
-      "iconPath": "images/tabs/vote.png",
-      "selectedIconPath": "images/tabs/vote_focus.png",
-      "text": "去投票"
-    },
-    {
       "pagePath": "pages/rankList/rankList",
       "iconPath": "images/tabs/rank.png",
       "selectedIconPath": "images/tabs/rank_focus.png",
-      "text": "当前排名"
+      "text": "点赞榜"
     }]
   },
   "debug": true
