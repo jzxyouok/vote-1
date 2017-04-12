@@ -1,6 +1,6 @@
 <view class="container">
     <view class="hint">
-        每个微信账号只能完成投票一次，请选择1--5篇文章投票。
+        请选择1--5篇文章点个赞，每个微信号只能赞一次。
     </view>
 
     <checkbox-group bindchange="checkboxChange">

@@ -28,7 +28,7 @@ Page({
         });
     },
 
-    //点击按钮进行投票
+    //点击按钮进行点赞
     vote:function () {
         var that = this;
         if(that.checkNum(that.data.choicesArr)){
@@ -42,7 +42,7 @@ Page({
                 success: function(resp) {
                     if(resp.data.code == "00"){
                         wx.showToast({
-                            title:"投票成功",
+                            title:"点赞成功",
                             complete:function () {
                                 wx.switchTab({
                                     url: 'pages/rankList/rankList'
@@ -58,14 +58,14 @@ Page({
                 },
                 fail: function() {
                     wx.showToast({
-                        title:"投票失败"
+                        title:"点赞失败"
                     })
                 }
             });
         }
         else{
             wx.showToast({
-                title:"请选择1-5篇文章进行投票",
+                title:"请选择1-5篇文章",
                 icon:"loading"
             })
         }
