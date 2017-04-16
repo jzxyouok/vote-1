@@ -1,0 +1,1 @@
+INSERT INTO tbl_vote (VOTER, CHOICES) VALUES ('ohP_s0FEY3uEgqsXbjeNi30Do-mU', '17_16_15');
