@@ -69,34 +69,37 @@
     //进行投票
     function vote(){
         voter = $(".voterInput").eq(0).val();
-        if(checkNum()){
-            window.UP.W.UI.showLoading("数据加载中");
-            $.ajax({
-                type: 'GET',
-                url: 'https://weapp.zhanghao90.cn/vote/interface/vote.php?choices=' + choicesStr + '&voter=' + voter,
-                contentType: "application/json; charset=utf-8",
-                dataType: 'json',
-                success: function (resp) {
-                    window.UP.W.UI.dismiss();
-                    if(resp.code == '00') {
-                        window.UP.W.UI.showAlert(resp.msg, function(){
-                            window.location.href = "./rankList.html";
-                        }, null, null, null,"提示");
-                    }
-                    else{
+        if(voter!= ""){
+            if(checkNum()){
+                window.UP.W.UI.showLoading("数据加载中");
+                $.ajax({
+                    type: 'GET',
+                    url: 'https://weapp.zhanghao90.cn/vote/interface/vote.php?choices=' + choicesStr + '&voter=' + voter,
+                    contentType: "application/json; charset=utf-8",
+                    dataType: 'json',
+                    success: function (resp) {
+                        window.UP.W.UI.dismiss();
+                        if(resp.code == '00') {
+                            window.UP.W.UI.showAlert(resp.msg, function(){
+                                window.location.href = "./rankList.html";
+                            }, null, null, null,"提示");
+                        }
+                        else{
+                            window.UP.W.UI.showAlert(resp.msg, null, null, null, null,"提示");
+                        }
+                    },
+                    error: function (resp) {
                         window.UP.W.UI.showAlert(resp.msg, null, null, null, null,"提示");
                     }
-                },
-                error: function (resp) {
-                    window.UP.W.UI.showAlert(resp.msg, null, null, null, null,"提示");
-                }
-            });
+                });
+            }
+            else{
+                window.UP.W.UI.showAlert("请选择1-5篇文章", null, null, null, null,"提示");
+            }
         }
         else{
-            window.UP.W.UI.showAlert("请选择1-5篇文章", null, null, null, null,"提示");
+            window.UP.W.UI.showAlert("请填写姓名", null, null, null, null,"提示");
         }
-
-
     }
 
     //获取投票选项
