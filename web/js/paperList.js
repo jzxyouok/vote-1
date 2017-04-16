@@ -32,7 +32,7 @@
                 + data[i].title
                 +  '<img class="titleArrow fr" src="../image/icons/arrow.png" /></div><div class="itemDetail"><div class="subTitle">'
                 + data[i].subTitle
-                + '</div><div class="author">作者：' +
+                + '</div><div class="author">作者：'
                 + data[i].author
                 + '</div></div></div>';
         }
