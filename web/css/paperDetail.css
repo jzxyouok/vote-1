@@ -52,3 +52,10 @@
 .detail-voteArea{
     padding:25px 5%;
 }
+
+.detail-button{
+    width:100%;
+    font-size: 2rem;
+    color:#ffffff;
+    background-color: #51C332;
+}

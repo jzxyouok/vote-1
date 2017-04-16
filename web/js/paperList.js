@@ -3,12 +3,14 @@
 
     var dataList = [];
     onInit();
-    
+
+    //初始化
     function onInit() {
         getList();
         bindEvents();
     }
 
+    //获取文章列表
     function getList() {
         window.UP.W.UI.showLoading("数据加载中");
         $.ajax({
@@ -31,7 +33,8 @@
             }
         });
     }
-    
+
+    //显示文章列表
     function buildList(data) {
         var dom = "";
         for(var i=0;i<data.length;i++){
@@ -45,17 +48,25 @@
         }
         $("#list-container").append(dom);
     }
-    
+
+    //绑定事件
     function bindEvents() {
+        //去详情页面
         $("#list-container").on("click",".paperItem",function (e) {
             var ele = $(e.target).closest(".paperItem");
             var index = ele.data("index");
             window.location.hash = "#detail/" + index;
         });
 
+        //点击投票
+        $("#detail-container").on("click","button",function (e) {
+            window.location.href = "./vote.html";
+        });
+
         //监听锚点的改变
         window.addEventListener("hashchange", function(){
             var hash = window.location.hash;
+            //显示详情
             if(hash.indexOf("#")>=0){
                 hash = hash.substring(1);
                 var hashArr = hash.split("/");
@@ -72,7 +83,8 @@
             }
         });
     }
-    
+
+    //显示详情页面
     function buildDetail(index) {
         var obj = dataList[index];
         var dom = "";
@@ -90,7 +102,7 @@
                 + obj.content[i]
                 + '</div>';
         }
-        dom += '</div></div><div class="detail-voteArea"><button>去点赞</button></div>';
+        dom += '</div></div><div class="detail-voteArea"><button class="detail-button">去点赞</button></div>';
         $("#detail-container").empty().append(dom);
     }
 
