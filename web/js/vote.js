@@ -50,7 +50,7 @@
                 + data[i].title
                 + '</div>';
         }
-        dom += '</div><div class="voteArea"><button class="voteButton">确认点赞</button></div>';
+        dom += '</div><div class="voteArea"><div class="voter">投票人姓名：<input type="text" class="voterInput"/></div><button class="voteButton">确认点赞</button></div>';
         $("#vote-container").append(dom);
     }
 
@@ -68,6 +68,7 @@
 
     //进行投票
     function vote(){
+        voter = $(".voterInput").eq(0).val();
         if(checkNum()){
             window.UP.W.UI.showLoading("数据加载中");
             $.ajax({
