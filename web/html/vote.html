@@ -1,18 +1,22 @@
-<view class="container">
-    <view class="hint">
-        请选择1--5篇文章点个赞，每个微信号只能赞一次。
-    </view>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>团队征文</title>
+    <link rel="stylesheet" type="text/css" href="../css/commonUI.css?rev=@@hash"/>
+    <link rel="stylesheet" type="text/css" href="../css/vote.css?rev=@@hash"/>
+</head>
+<body>
 
-    <checkbox-group bindchange="checkboxChange">
-      <label class="checkbox" wx:for="{{listData}}" wx:for-item="item">
-        <view class="listItem">
-           <checkbox value="{{item.index}}"/>{{item.author}}：{{item.title}}
-        </view>
-      </label>
-    </checkbox-group>
-    <view class="voteArea">
-        <button type="primary" bindtap="vote">确认点赞</button>
-    </view>
+<div id="vote-container">
+</div>
 
-</view>
+<script type="text/javascript" src="../js/zepto.min.js?rev=@@hash"></script>
+<script type="text/javascript" src="../js/commonUI.js?rev=@@hash"></script>
+<script type="text/javascript" src="../js/vote.js?rev=@@hash"></script>
+</body>
+</html>
 

@@ -11,6 +11,10 @@
     width:100%;
 }
 
+input{
+    vertical-align: middle;
+}
+
 .listItem{
     width:96%;
     padding:10px 2%;
@@ -20,4 +24,15 @@
 
 .voteArea{
     padding:25px 5%;
+}
+
+.voteButton{
+    width: 100%;
+    font-size: 1.5rem;
+    color: #ffffff;
+    background-color: #51C332;
+    border: none;
+    border-radius: 4px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }

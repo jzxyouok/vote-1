@@ -25,11 +25,11 @@
                     buildList(resp.data);
                 }
                 else{
-                    window.UP.W.UI.showAlert(resp.msg, null, null, null, null,"错误提示");
+                    window.UP.W.UI.showAlert(resp.msg, null, null, null, null,"提示");
                 }
             },
             error: function (resp) {
-                window.UP.W.UI.showAlert(resp.msg, null, null, null, null,"错误提示");
+                window.UP.W.UI.showAlert(resp.msg, null, null, null, null,"提示");
             }
         });
     }
