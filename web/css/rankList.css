@@ -6,7 +6,7 @@
     float:left;
 }
 
-.paperItem{
+.rank-paperItem{
     width: 100%;
     border-bottom: 1px solid #a9a9a9;
     margin: 0px;
@@ -16,23 +16,23 @@
     padding-bottom:20px;
 }
 
-.rankNum{
+.rank-rankNum{
     font-weight:bold;
     font-size:1rem;
 }
 
-.title{
+.rank-title{
     font-size:0.8rem;
     color:#666666;
 }
 
-.voteNum{
+.rank-voteNum{
     color:#EA9C00;
     font-size:0.8rem;
     padding-right:20px;
 }
 
-.star{
+.rank-star{
     width:15px;
     height:15px;
     padding-right: 8px;

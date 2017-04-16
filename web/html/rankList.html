@@ -1,10 +1,21 @@
-<scroll-view scroll-y="true" style="height: 100%;">
-    <view wx:for="{{rankList}}" wx:for-item="item" wx:for-index="index" wx:key="{{index}}">
-        <view class="paperItem fl">
-             <view class="rankNum fl">{{index+1}}</view>
-             <view class="title fl">{{item.name}}</view>
-             <view class="voteNum fr">{{item.vote_num}}</view>
-             <image class="star fr" src="../../images/icons/star.png"></image>
-        </view>
-    </view>
-</scroll-view>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>团队征文</title>
+    <link rel="stylesheet" type="text/css" href="../css/commonUI.css?rev=@@hash"/>
+    <link rel="stylesheet" type="text/css" href="../css/rankList.css?rev=@@hash"/>
+</head>
+<body>
+
+<div id="rank-container">
+</div>
+
+<script type="text/javascript" src="../js/zepto.min.js?rev=@@hash"></script>
+<script type="text/javascript" src="../js/commonUI.js?rev=@@hash"></script>
+<script type="text/javascript" src="../js/rankList.js?rev=@@hash"></script>
+</body>
+</html>

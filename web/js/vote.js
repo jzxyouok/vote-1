@@ -1,5 +1,49 @@
-var app = getApp();
-var config = require("../../util/config.js");
+;(function ($) {
+    "use strict";
+
+    onInit();
+
+    //初始化
+    function onInit() {
+        getList();
+        bindEvents();
+    }
+
+    //获取文章列表
+    function getList() {
+        window.UP.W.UI.showLoading("数据加载中");
+        $.ajax({
+            type: 'GET',
+            url: 'https://weapp.zhanghao90.cn/vote/data/paper.json',
+            contentType: "application/json; charset=utf-8",
+            dataType: 'json',
+            success: function (resp) {
+                window.UP.W.UI.dismiss();
+                if(resp.code == '00') {
+
+                }
+                else{
+                    window.UP.W.UI.showAlert(resp.msg, null, null, null, null,"错误提示");
+                }
+            },
+            error: function (resp) {
+                window.UP.W.UI.showAlert(resp.msg, null, null, null, null,"错误提示");
+            }
+        });
+    }
+
+
+
+    //绑定事件
+    function bindEvents() {
+
+
+
+    }
+
+
+
+})(Zepto);
 
 Page({
     data: {
@@ -9,10 +53,7 @@ Page({
         choices:"",
         choicesArr:[]
     },
-    
-    onPullDownRefresh: function(){
-        wx.stopPullDownRefresh()
-    },
+
 
     onLoad: function () {
         var that = this;
