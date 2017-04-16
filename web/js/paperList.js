@@ -1,6 +1,7 @@
 ;(function ($) {
     "use strict";
 
+    var dataList = [];
     onInit();
     
     function onInit() {
@@ -18,6 +19,7 @@
             success: function (resp) {
                 window.UP.W.UI.dismiss();
                 if(resp.code == '00') {
+                    dataList = resp.data;
                     buildList(resp.data);
                 }
                 else{
@@ -47,21 +49,49 @@
     function bindEvents() {
         $("#list-container").on("click",".paperItem",function (e) {
             var ele = $(e.target).closest(".paperItem");
-            var data = ele.data("index");
-
+            var index = ele.data("index");
+            window.location.hash = "#detail/" + index;
         });
 
         //监听锚点的改变
         window.addEventListener("hashchange", function(){
-            if (window.location.hash == ""){
-                $("#list-container").show();
-                $("#detail-container").hide();
-            }
-            else if(window.location.hash == "#paperDetail"){
+            var hash = window.location.hash;
+            if(hash.indexOf("#")>=0){
+                hash = hash.substring(1);
+                var hashArr = hash.split("/");
+                var name = hashArr[0];
+                var index = hashArr[1];
                 $("#list-container").hide();
+                buildDetail(index);
                 $("#detail-container").show();
             }
+            //显示列表
+            else{
+                $("#detail-container").hide();
+                $("#list-container").show();
+            }
         });
+    }
+    
+    function buildDetail(index) {
+        var obj = dataList[index];
+        var dom = "";
+        dom += '<div><div class="detail-paperItem"><div class="detail-titleItem">'
+            + obj.title
+            + '</div><div class="detail-itemDetail"><div class="detail-subTitle">'
+            + obj.subTitle
+            + '</div><div class="detail-author">作者：'
+            + obj.author
+            + '</div></div></div>'
+            + '<div class="detail-textAreaBox">';
+
+        for(var i=0;i<obj.content.length;i++){
+            dom += '<div class="detail-paragraph">'+ "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"
+                + obj.content[i]
+                + '</div>';
+        }
+        dom += '</div></div><div class="detail-voteArea"><button>去点赞</button></div>';
+        $("#detail-container").empty().append(dom);
     }
 
 })(Zepto);
