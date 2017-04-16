@@ -1,0 +1,51 @@
+.fr{
+    float:right;
+}
+
+.fl{
+    float:left;
+}
+
+.paperItem{
+    width: 100%;
+    height: 6rem;
+    border-bottom: 1px solid #a9a9a9;
+    margin: 0px;
+    background-color: #ffffff;
+    font-size:1rem;
+    text-indent: 10px;
+}
+
+.titleItem{
+    font-weight: bold;
+    width:100%;
+    padding-top:0.4rem;
+    padding-bottom:0.4rem;
+    background-color: #E0E0E0;
+}
+
+.titleArrow{
+    width:12px;
+    height:15px;
+    padding-right: 13px;
+    padding-top: 4px;
+}
+
+.itemDetail{
+    width:100%;
+    font-size: 0.8rem;
+    color:#666666;
+}
+
+.subTitle{
+    width:100%;
+    float:left;
+    padding-top: 8px;
+}
+
+.author{
+    width:100%;
+    float:left;
+    font-weight: bold;
+    padding-top:8px;
+}

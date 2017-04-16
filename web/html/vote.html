@@ -1,0 +1,18 @@
+<view class="container">
+    <view class="hint">
+        请选择1--5篇文章点个赞，每个微信号只能赞一次。
+    </view>
+
+    <checkbox-group bindchange="checkboxChange">
+      <label class="checkbox" wx:for="{{listData}}" wx:for-item="item">
+        <view class="listItem">
+           <checkbox value="{{item.index}}"/>{{item.author}}：{{item.title}}
+        </view>
+      </label>
+    </checkbox-group>
+    <view class="voteArea">
+        <button type="primary" bindtap="vote">确认点赞</button>
+    </view>
+
+</view>
+

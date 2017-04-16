@@ -1,0 +1,39 @@
+.fr{
+    float:right;
+}
+
+.fl{
+    float:left;
+}
+
+.paperItem{
+    width: 100%;
+    border-bottom: 1px solid #a9a9a9;
+    margin: 0px;
+    background-color: #ffffff;
+    text-indent: 10px;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+.rankNum{
+    font-weight:bold;
+    font-size:1rem;
+}
+
+.title{
+    font-size:0.8rem;
+    color:#666666;
+}
+
+.voteNum{
+    color:#EA9C00;
+    font-size:0.8rem;
+    padding-right:20px;
+}
+
+.star{
+    width:15px;
+    height:15px;
+    padding-right: 8px;
+}
