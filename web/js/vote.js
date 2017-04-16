@@ -28,11 +28,11 @@
                     buildList(resp.data);
                 }
                 else{
-                    window.UP.W.UI.showAlert(resp.msg, null, null, null, null,"提示");
+                    window.UP.W.UI.showAlert("获取列表失败", null, null, null, null,"提示");
                 }
             },
             error: function (resp) {
-                window.UP.W.UI.showAlert(resp.msg, null, null, null, null,"提示");
+                window.UP.W.UI.showAlert("获取列表失败", null, null, null, null,"提示");
             }
         });
     }
