@@ -59,8 +59,13 @@
         });
 
         //点击投票
-        $("#detail-container").on("click","button",function (e) {
+        $("#detail-container").on("click","#goVote",function (e) {
             window.location.href = "./vote.html";
+        });
+
+        //点击去排名页面
+        $("#detail-container").on("click","#goRank",function (e) {
+            window.location.href = "./rankList.html";
         });
 
         //监听锚点的改变
@@ -103,7 +108,7 @@
                 + obj.content[i]
                 + '</div>';
         }
-        dom += '</div></div><div class="detail-voteArea"><button class="detail-button">去点赞</button></div>';
+        dom += '</div></div><div class="detail-voteArea"><button class="detail-button" id="goVote">去点赞</button><button class="detail-button" id="goRank">看排名</button></div>';
         $("#detail-container").empty().append(dom);
     }
 

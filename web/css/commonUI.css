@@ -456,9 +456,9 @@ button, input, select {
 
 .commonUI-alertTitle {
     font-size: 1.2rem;
-    line-height: 4rem;
+    line-height: 2rem;
     font-weight: bold;
-    height: 30%;
+    height: 24%;
 }
 
 .commonUI-alertTop {
