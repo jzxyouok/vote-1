@@ -1,7 +1,12 @@
 ;(function ($) {
     "use strict";
 
-    getList();
+    onInit();
+    
+    function onInit() {
+        getList();
+        bindEvents();
+    }
 
     function getList() {
         window.UP.W.UI.showLoading("数据加载中");
@@ -28,7 +33,7 @@
     function buildList(data) {
         var dom = "";
         for(var i=0;i<data.length;i++){
-            dom += '<div class="paperItem"><div class="titleItem">'
+            dom += '<div class="paperItem" data-index="'+ i +'"><div class="titleItem">'
                 + data[i].title
                 +  '<img class="titleArrow fr" src="../image/icons/arrow.png" /></div><div class="itemDetail"><div class="subTitle">'
                 + data[i].subTitle
@@ -37,6 +42,26 @@
                 + '</div></div></div>';
         }
         $("#list-container").append(dom);
+    }
+    
+    function bindEvents() {
+        $("#list-container").on("click",".paperItem",function (e) {
+            var ele = $(e.target).closest(".paperItem");
+            var data = ele.data("index");
+
+        });
+
+        //监听锚点的改变
+        window.addEventListener("hashchange", function(){
+            if (window.location.hash == ""){
+                $("#list-container").show();
+                $("#detail-container").hide();
+            }
+            else if(window.location.hash == "#paperDetail"){
+                $("#list-container").hide();
+                $("#detail-container").show();
+            }
+        });
     }
 
 })(Zepto);
