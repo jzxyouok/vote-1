@@ -98,23 +98,23 @@
             html += '</div>';
             html += '</div>';
             $('body').append(html);
-
-            $('.commonUI-alertButton').bind('click', function () {
-                $el.hide();
-                $('body').removeClass('commonUI-overflow');
-                // 确定点击了哪个按钮，调用对应的回调
-                var type = $(this).attr('data-btn');
-                if (type === 'Yes' || type === 'OK') {
-                    if (typeof okCallback === 'function') {
-                        okCallback();
-                    }
-                } else if (type === 'No') {
-                    if (typeof cancelCallback === 'function') {
-                        cancelCallback();
-                    }
-                }
-            });
         }
+
+        $('.commonUI-alertButton').unbind('click').bind('click', function () {
+            $el.hide();
+            $('body').removeClass('commonUI-overflow');
+            // 确定点击了哪个按钮，调用对应的回调
+            var type = $(this).attr('data-btn');
+            if (type === 'Yes' || type === 'OK') {
+                if (typeof okCallback === 'function') {
+                    okCallback();
+                }
+            } else if (type === 'No') {
+                if (typeof cancelCallback === 'function') {
+                    cancelCallback();
+                }
+            }
+        });
 
         var $el = $('#commonUIAlert');
         // 如果定义了cancelCallback或cancelText则是confirm

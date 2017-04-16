@@ -65,6 +65,7 @@
 
         //监听锚点的改变
         window.addEventListener("hashchange", function(){
+            document.documentElement.scrollTop = document.body.scrollTop =0;
             var hash = window.location.hash;
             //显示详情
             if(hash.indexOf("#")>=0){
