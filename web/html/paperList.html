@@ -1,15 +1,20 @@
-<scroll-view scroll-y="true" style="height: 100%;">
-    <view wx:for="{{listData}}" wx:for-item="item" wx:for-index="index" wx:key="{{index}}">
-        <view class="paperItem" bindtap="goDetail" data-paperid="{{item.index}}">
-            <view class="titleItem">
-                {{item.title}}
-                <image class="titleArrow fr" src="../../images/icons/arrow.png"></image>
-            </view>
-            <view class="itemDetail">
-                <view class="subTitle">{{item.subTitle}}</view>
-                <view class="author">作者：{{item.author}}</view>
-            </view>
-        </view>
-    </view>
-</scroll-view>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>团队征文</title>
+    <link rel="stylesheet" type="text/css" href="../css/commonUI.css?rev=@@hash"/>
+    <link rel="stylesheet" type="text/css" href="../css/paperList.css?rev=@@hash"/>
+</head>
+<body>
+    <div id="list-container">
+    </div>
+<script type="text/javascript" src="../js/zepto.min.js?rev=@@hash"></script>
+<script type="text/javascript" src="../js/commonUI.js?rev=@@hash"></script>
+<script type="text/javascript" src="../js/paperList.js?rev=@@hash"></script>
+</body>
+</html>
 
