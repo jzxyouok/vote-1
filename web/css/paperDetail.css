@@ -4,7 +4,7 @@
     border-bottom: 1px solid #a9a9a9;
     margin: 0px;
     background-color: #ffffff;
-    font-size:1rem;
+    font-size:1.2rem;
     text-indent: 10px;
     text-align:center;
 }
@@ -15,11 +15,12 @@
     padding-top:0.4rem;
     padding-bottom:0.4rem;
     background-color: #E0E0E0;
+    font-size:1.3rem;
 }
 
 .detail-itemDetail{
     width:100%;
-    font-size: 0.8rem;
+    font-size: 1rem;
     color:#666666;
 }
 
@@ -43,14 +44,14 @@
 }
 
 .detail-paragraph{
-    font-size:0.8rem;
+    font-size:1.1rem;
     color:#666666;
     padding-top:8px;
     padding-bottom:8px;
 }
 
 .detail-voteArea{
-    padding:25px 5%;
+    padding:10px 5% 25px;
 }
 
 .detail-button{
@@ -60,7 +61,7 @@
     background-color: #51C332;
     border: none;
     border-radius: 4px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    margin-top:10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 20px;
 }
